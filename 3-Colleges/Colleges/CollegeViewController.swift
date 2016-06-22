@@ -27,16 +27,22 @@ class CollegeViewController: UIViewController {
         print("COLLEGE: \(self.college.name)")
         
 
-        let url = "https://colleges-api.herokuapp.com/api/college" + college.id
+        let url = "https://colleges-api.herokuapp.com/api/college/" + college.id
         
         Alamofire.request(.GET, url, parameters: nil).responseJSON { response in
             
             if let json = response.result.value as? Dictionary<String, AnyObject>{
                 print("\(json)")
+                
+                if let collegeInfo = json["college"] as? Dictionary<String, AnyObject>{
+                    print("\(collegeInfo)")
+                    
+                    if let description = collegeInfo["description"] as? String {
+                        print("\(description)")
+                    }
+                }
             }
-            
         }
-
     }
 
     override func didReceiveMemoryWarning() {
