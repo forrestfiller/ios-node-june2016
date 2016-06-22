@@ -14,6 +14,13 @@
 		0C313AD61D18AD440005567F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C313AD51D18AD440005567F /* Assets.xcassets */; };
 		0C313AD91D18AD440005567F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C313AD71D18AD440005567F /* LaunchScreen.storyboard */; };
 		0C54DD5E1D18BF7800797BB4 /* College.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C54DD5D1D18BF7800797BB4 /* College.swift */; };
+		B71A94DE1D1B480A00804A5B /* harvard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71A94D81D1B480A00804A5B /* harvard@2x.png */; };
+		B71A94DF1D1B480A00804A5B /* michigan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71A94D91D1B480A00804A5B /* michigan@2x.png */; };
+		B71A94E01D1B480A00804A5B /* nyu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71A94DA1D1B480A00804A5B /* nyu@2x.png */; };
+		B71A94E11D1B480A00804A5B /* ucla@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71A94DB1D1B480A00804A5B /* ucla@2x.png */; };
+		B71A94E21D1B480A00804A5B /* uconn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71A94DC1D1B480A00804A5B /* uconn@2x.png */; };
+		B71A94E31D1B480A00804A5B /* wisconsin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71A94DD1D1B480A00804A5B /* wisconsin@2x.png */; };
+		B71A94E51D1B498C00804A5B /* CollegeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A94E41D1B498C00804A5B /* CollegeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +34,13 @@
 		0C54DD5D1D18BF7800797BB4 /* College.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = College.swift; sourceTree = "<group>"; };
 		5CB4D8AAD7815046DB15EB13 /* Pods_Colleges.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Colleges.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E829C9E11BD127278D783C /* Pods-Colleges.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colleges.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Colleges/Pods-Colleges.debug.xcconfig"; sourceTree = "<group>"; };
+		B71A94D81D1B480A00804A5B /* harvard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "harvard@2x.png"; sourceTree = "<group>"; };
+		B71A94D91D1B480A00804A5B /* michigan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "michigan@2x.png"; sourceTree = "<group>"; };
+		B71A94DA1D1B480A00804A5B /* nyu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nyu@2x.png"; sourceTree = "<group>"; };
+		B71A94DB1D1B480A00804A5B /* ucla@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ucla@2x.png"; sourceTree = "<group>"; };
+		B71A94DC1D1B480A00804A5B /* uconn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uconn@2x.png"; sourceTree = "<group>"; };
+		B71A94DD1D1B480A00804A5B /* wisconsin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wisconsin@2x.png"; sourceTree = "<group>"; };
+		B71A94E41D1B498C00804A5B /* CollegeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollegeViewController.swift; sourceTree = "<group>"; };
 		D680BCC327D48306239443C3 /* Pods-Colleges.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colleges.release.xcconfig"; path = "Pods/Target Support Files/Pods-Colleges/Pods-Colleges.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,9 +77,11 @@
 		0C313ACD1D18AD440005567F /* Colleges */ = {
 			isa = PBXGroup;
 			children = (
+				B71A94D71D1B480A00804A5B /* images */,
 				0C54DD5C1D18BF6200797BB4 /* models */,
 				0C313ACE1D18AD440005567F /* AppDelegate.swift */,
 				0C313AD01D18AD440005567F /* ViewController.swift */,
+				B71A94E41D1B498C00804A5B /* CollegeViewController.swift */,
 				0C313AD21D18AD440005567F /* Main.storyboard */,
 				0C313AD51D18AD440005567F /* Assets.xcassets */,
 				0C313AD71D18AD440005567F /* LaunchScreen.storyboard */,
@@ -97,6 +113,19 @@
 				5CB4D8AAD7815046DB15EB13 /* Pods_Colleges.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B71A94D71D1B480A00804A5B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B71A94D81D1B480A00804A5B /* harvard@2x.png */,
+				B71A94D91D1B480A00804A5B /* michigan@2x.png */,
+				B71A94DA1D1B480A00804A5B /* nyu@2x.png */,
+				B71A94DB1D1B480A00804A5B /* ucla@2x.png */,
+				B71A94DC1D1B480A00804A5B /* uconn@2x.png */,
+				B71A94DD1D1B480A00804A5B /* wisconsin@2x.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,9 +189,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B71A94E31D1B480A00804A5B /* wisconsin@2x.png in Resources */,
 				0C313AD91D18AD440005567F /* LaunchScreen.storyboard in Resources */,
 				0C313AD61D18AD440005567F /* Assets.xcassets in Resources */,
+				B71A94DF1D1B480A00804A5B /* michigan@2x.png in Resources */,
+				B71A94E11D1B480A00804A5B /* ucla@2x.png in Resources */,
+				B71A94E21D1B480A00804A5B /* uconn@2x.png in Resources */,
 				0C313AD41D18AD440005567F /* Main.storyboard in Resources */,
+				B71A94DE1D1B480A00804A5B /* harvard@2x.png in Resources */,
+				B71A94E01D1B480A00804A5B /* nyu@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B71A94E51D1B498C00804A5B /* CollegeViewController.swift in Sources */,
 				0C313AD11D18AD440005567F /* ViewController.swift in Sources */,
 				0C313ACF1D18AD440005567F /* AppDelegate.swift in Sources */,
 				0C54DD5E1D18BF7800797BB4 /* College.swift in Sources */,

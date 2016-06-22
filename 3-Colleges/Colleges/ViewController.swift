@@ -54,13 +54,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellId) {
             cell.textLabel?.text = college.name
             cell.detailTextLabel?.text = college.location+", "+college.mascot
+            cell.imageView?.image = UIImage(named: college.image)
             return cell
         }
         
         let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: cellId)
         cell.textLabel?.text = college.name
         cell.detailTextLabel?.text = college.location+", "+college.mascot
+        cell.imageView?.image = UIImage(named: college.image)
         return cell
     }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let college = self.collegeList[indexPath.row]
+        let collegeVc =  CollegeViewController()
+        collegeVc.college = college
+        self.navigationController?.pushViewController(collegeVc, animated: true)
+    }
+    
 }
+
+
+
+
+
 
