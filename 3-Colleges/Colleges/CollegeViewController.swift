@@ -12,12 +12,25 @@ import Alamofire
 class CollegeViewController: UIViewController {
     
     var college: College!
+    var summaryLabel: UILabel!
+    var scrollView: UIScrollView!
     
     override func loadView() {
         let frame = UIScreen.mainScreen().bounds
         let view = UIView(frame: frame)
         view.backgroundColor = .redColor()
-        
+    // add a scroll view
+        self.scrollView = UIScrollView(frame: frame)
+        self.scrollView.backgroundColor = .greenColor()
+        self.scrollView.scrollEnabled = true
+        view.addSubview(self.scrollView)
+    // add a summary label
+        self.summaryLabel = UILabel(frame: CGRect(x: 20, y: 20, width: frame.size.width-40, height: 22))
+        summaryLabel.backgroundColor = .blueColor()
+        summaryLabel.numberOfLines = 0 // "0" means unlimited. default is "1" which means only 1 line!
+        summaryLabel.lineBreakMode = .ByWordWrapping // don't break up words
+        self.scrollView.addSubview(self.summaryLabel)
+
         self.view = view
     }
 
@@ -25,12 +38,9 @@ class CollegeViewController: UIViewController {
         super.viewDidLoad()
         
         print("COLLEGE: \(self.college.name)")
-        
-
         let url = "https://colleges-api.herokuapp.com/api/college/" + college.id
         
         Alamofire.request(.GET, url, parameters: nil).responseJSON { response in
-            
             if let json = response.result.value as? Dictionary<String, AnyObject>{
                 print("\(json)")
                 
@@ -39,6 +49,24 @@ class CollegeViewController: UIViewController {
                     
                     if let description = collegeInfo["description"] as? String {
                         print("\(description)")
+                        
+                        self.college.summary = description
+                        print("\(self.college.summary)")
+                        self.summaryLabel.text = self.college.summary
+                        
+                        var frame =  self.summaryLabel.frame
+                        let str = NSString(string: description) // making the transfer from objc to swift with NNString
+                        
+                        let bounds = str.boundingRectWithSize(
+                            CGSizeMake(frame.size.width, 1200),
+                            options: .UsesLineFragmentOrigin,
+                            attributes:  [NSFontAttributeName:self.summaryLabel.font!],
+                            context: nil)
+                        
+                        frame.size.height = bounds.size.height
+                        self.summaryLabel.frame = frame
+                        self.scrollView.contentSize = CGSizeMake(0, frame.size.height+40)
+       
                     }
                 }
             }
@@ -49,7 +77,6 @@ class CollegeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
